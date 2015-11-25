@@ -1,0 +1,54 @@
+html{
+  overflow: hidden;
+}
+/*GLOBAL CLASSES*/
+
+
+
+/*DATE CARD */
+
+/*MAIN PAGE*/
+#main_page{
+  height:95%;
+  width:100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#cards_holder{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  height:100%;
+  width:100%;
+}
+#Nav_Bar{
+  position:inherit;
+}
+.calender_row{
+  display:flex;
+  justify-content: center ;
+  align-items: center;
+  width:100%;
+
+}
+@media screen and (max-width: 1065px) {
+  .date_number,.events_number{
+    font-size:3em;
+  }
+  html{
+    overflow: auto;
+  }
+  #main_page,#cards_holder{
+    height:inherit;
+  }
+  .card{
+    width:100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .calender_row{
+    flex-direction: column;
+  }
+}

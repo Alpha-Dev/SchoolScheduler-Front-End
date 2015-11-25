@@ -1,0 +1,116 @@
+/*FONTS*/
+@font-face{
+  src:url("../font/WalkwayBlack.ttf");
+  font-family:WalkwayBlack;
+}
+@font-face{
+  src:url("../font/WalkwaySemiBold.ttf");
+  font-family:mainfont;
+}
+
+
+html{
+  background-color:#99ccff;
+  height:100%;
+  width:100%;
+  font-family:mainfont;
+  color:black;
+}
+p{
+  padding:0;
+  margin:0;
+}
+body{
+  padding: 0;
+  margin:0;
+}
+a{
+  color:black;
+  padding: 0;
+  margin:0;
+  text-decoration: none;
+}
+/*NAV BAR STYLING*/
+#Nav_Bar{
+  margin-top: 1%;
+  width:100%;
+  font-size:2em;
+  font-family:WalkwayBlack;
+  position:fixed;
+  z-index: 5;
+  height:5%;
+}
+#Nav_bar_left{
+  padding-left:1%;
+}
+#Nav_bar_right{
+  position:absolute;
+  right:1%;
+  top:1%;
+}
+.Nav_Bar_Link{
+  display:inline-block;
+  border:solid black;
+  padding:5px;
+  transition:all 0.5s;
+  cursor:pointer;
+  border-radius:0.1em;
+}
+.Nav_Bar_Link:hover{
+  color:white;
+  border:solid white;
+}
+/*CARD STUFF*/
+.card{
+  height:375px;
+  width:300px;
+  background-color:#ffffcc;
+  position:relative;
+  border:solid #999900;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 1;
+}
+.card_overflow_month{
+  background-color: #ffffe5;
+}
+.conflicts{
+  font-size:1em;
+}
+.events{
+  position:absolute;
+  bottom:10px;
+  right:10px;
+  font-size:1em;
+}
+.day{
+  position:absolute;
+  bottom:10px;
+  left:10px;
+  font-size:1.2em;
+}
+.events_number{
+  font-size:2em;
+}
+.date_number{
+  position:absolute;
+  top:10px;
+  left:10px;
+  font-size:1.5em;
+}
+.notice{
+  font-size:2em;
+  position:absolute;
+  right:0px;
+  top:5px
+}
+.red{
+  color:red;
+  padding-left:5px;
+}
+.green{
+  color:green;
+
+}

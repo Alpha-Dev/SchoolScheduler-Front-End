@@ -1,0 +1,69 @@
+
+/*GLOBAL CLASSES*/
+
+
+
+/*DATE CARD */
+
+/*MAIN PAGE*/
+#main_page{
+  height:100%;
+  width:100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#play_badge_container{
+  margin-top:20px;
+  width:200px;
+}
+#play_badge{
+  width:100%;
+}
+#Text{
+  font-size:2em;
+  text-align: center;
+}
+#show_me{
+  font-size:2em;
+  margin-top:20px;
+  margin-bottom: 20px;
+}
+#down_button{
+  position:relative;
+  font-size:2em;
+  animation-name: updown;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+#down_button_container{
+  position:absolute;
+  bottom:0;
+  text-align:center;
+  background-color:rgba(0, 0, 0, 0.5);
+  width:100%;
+  cursor: pointer;
+}
+#down_button_container:hover #down_button{
+  color:white;
+}
+#page_2{
+  height:100%;
+  width:100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@keyframes updown{
+  0%{
+    bottom:0px;
+  }
+  50%{
+    bottom:2px;
+  }
+  100%{
+    bottom:0px;
+  }
+}

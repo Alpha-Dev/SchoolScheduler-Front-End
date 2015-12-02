@@ -55,11 +55,7 @@ html{
   .card{
     width:100%;
   }
-  .events{
-    display:flex;
-    flex-direction:column-reverse;
-    align-items: flex-end;
-  }
+
 }
 @media screen and (max-width: 600px) {
   .calender_row{

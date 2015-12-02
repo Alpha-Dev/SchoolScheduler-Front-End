@@ -13,14 +13,13 @@ html{
   width:100%;
   display:flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
 }
 #cards_holder{
   display:flex;
   flex-direction: column;
   justify-content: center;
-  height:100%;
   width:100%;
 }
 #Nav_Bar{
@@ -31,11 +30,21 @@ html{
   justify-content: center ;
   align-items: center;
   width:100%;
-
+}
+#month_container{
+  width:100%;
+  font-size:3em;
+  text-align: center;
 }
 @media screen and (max-width: 1065px) {
   .date_number,.events_number{
     font-size:3em;
+  }
+  .day{
+    font-size:2em;
+  }
+  .day_abrev{
+    display:none;
   }
   html{
     overflow: auto;
@@ -46,9 +55,27 @@ html{
   .card{
     width:100%;
   }
+  .events{
+    display:flex;
+    flex-direction:column-reverse;
+    align-items: flex-end;
+  }
 }
 @media screen and (max-width: 600px) {
   .calender_row{
     flex-direction: column;
+  }
+  .NoEvents{
+    display:none;
+  }
+  .card_style{
+    height:50%;
+    width:95%;
+    margin-bottom:10px;
+    font-size:2em;
+
+  }
+  .day_abrev{
+    display:inline;
   }
 }

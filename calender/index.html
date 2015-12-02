@@ -8,7 +8,10 @@
     <script src="../scripts/jquery.js"></script>
     <script src="../scripts/angular.min.js"></script>
     <script src="scripts/schoolsync.calender.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style id="card_style">
 
+    </style>
   </head>
   <body>
     <div id="Nav_Bar">
@@ -23,8 +26,12 @@
         </div>
       </div>
     </div>
+
     <div id="main_page" ng-app="myApp" ng-controller="namesCtrl">
         <div id="cards_holder">
+          <div id="month_container">
+            <p id="month_container_text"></p>
+          </div>
         </div>
     </div>
 

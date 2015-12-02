@@ -62,8 +62,6 @@ a{
 }
 /*CARD STUFF*/
 .card{
-  height:375px;
-  width:300px;
   background-color:#ffffcc;
   position:relative;
   border:solid #999900;
@@ -72,6 +70,11 @@ a{
   align-items: center;
   flex-direction: column;
   opacity: 1;
+  cursor:pointer;
+  border-width:3px;
+}
+.card:hover{
+  border-color:black;
 }
 .card_overflow_month{
   background-color: #ffffe5;
@@ -86,10 +89,10 @@ a{
   font-size:1em;
 }
 .day{
+  font-size:1.5em;
   position:absolute;
   bottom:10px;
   left:10px;
-  font-size:1.2em;
 }
 .day_abrev{
   font-size:0.6em;
@@ -105,15 +108,19 @@ a{
 }
 .notice{
   font-size:2em;
-  position:absolute;
-  right:0px;
-  top:5px
+
 }
 .red{
   color:red;
   padding-right:10px;
+  border-color:red
 }
 .green{
   color:green;
-
+}
+.Conflict{
+  border-color:red
+}
+.NoConflict{
+  border-color:green;
 }

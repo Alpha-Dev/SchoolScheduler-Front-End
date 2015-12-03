@@ -1,4 +1,4 @@
-<html>
+<html ng-app="myApp" ng-controller="namesCtrl">
   <head>
     <title>Linkus</title>
     <link rel="stylesheet" type="text/css" href="../css/standard.css"/>
@@ -10,7 +10,9 @@
     <script src="scripts/schoolsync.calender.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style id="card_style">
+      .card_style{
 
+      }
     </style>
   </head>
   <body>
@@ -27,10 +29,22 @@
       </div>
     </div>
 
-    <div id="main_page" ng-app="myApp" ng-controller="namesCtrl">
-        <div id="cards_holder">
+    <div id="main_page" >
+        <div id="cards_holder"ng-init="">
           <div id="month_container">
-            <p id="month_container_text"></p>
+            <p id="month_container_text">{{month_text}}</p>
+          </div>
+          <div ng-show="NoEvents && mobile" id="NoCards">
+            <p >No Events</p>
+          </div>
+          <div ng-hide="NoEvents && mobile" ng-repeat="x in NumberRepeater|limitTo:6 track by $index" class="calender_row" >
+            <div ng-hide="mobile && !day_data.events_bool" ng-repeat="x in NumberRepeater|limitTo:7 track by $index" ng-init="day_data = getDayInfo();class_holder = DetermineIfOverFlowCards();border = DetermineBorders(day_data.events_bool,day_data.conflicts_bool)" id="card_number_{{day_num}}" class="card card_style {{class_holder}} {{border}}">
+              <p class="date_number">{{day_data.num}}</p>
+              <p class="day">{{day_data.letter}}<span class="day_abrev">{{day_data.abrv}}</span></p>
+              <p ng-show="day_data.conflicts_bool" class="notice red">!</p>
+              <p ng-show="day_data.events_bool && !day_data.conflicts_bool" class="notice green icon-ok"></p>
+              <p ng-show="day_data.events_bool" class="events">events<span class="events_number">{{day_data.events_info.events.length}}</span></p>
+            </div>
           </div>
         </div>
     </div>

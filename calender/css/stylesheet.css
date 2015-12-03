@@ -6,7 +6,13 @@ html{
 
 
 /*DATE CARD */
-
+/*
+.card_style{
+  height:64;
+  width:81.625;
+  font-size:0.70978em;
+}
+*/
 /*MAIN PAGE*/
 #main_page{
   height:95%;
@@ -24,6 +30,14 @@ html{
 }
 #Nav_Bar{
   position:inherit;
+}
+#NoCards{
+  text-align: center;
+  font-size:2em;
+  height:60%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
 .calender_row{
   display:flex;
@@ -73,5 +87,16 @@ html{
   }
   .day_abrev{
     display:inline;
+  }
+}
+@media screen and (max-height:570px){
+  .day{
+    font-size:1.5em;
+  }
+  .date_number{
+    font-size:2em;
+  }
+  .events_number{
+    font-size:2em;
   }
 }

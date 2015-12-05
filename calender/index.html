@@ -32,18 +32,19 @@
     <div id="main_page" >
         <div id="cards_holder"ng-init="">
           <div id="month_container">
-            <p id="month_container_text">{{month_text}}</p>
+            <p id="month_container_text">{{month_text}} {{date.getFullYear()}}</p>
+            <div><i class="icon-left-open left-direction calendar_nav" ng-click="NewCalendar(date,0)"></i><i class="icon-right-open calendar_nav" ng-click="NewCalendar(date,1)"></i></div>
           </div>
           <div ng-show="NoEvents && mobile" id="NoCards">
             <p >No Events</p>
           </div>
           <div ng-hide="NoEvents && mobile" ng-repeat="x in NumberRepeater|limitTo:6 track by $index" class="calender_row" >
-            <div ng-hide="mobile && !day_data.events_bool" ng-repeat="x in NumberRepeater|limitTo:7 track by $index" ng-init="day_data = getDayInfo();class_holder = DetermineIfOverFlowCards();border = DetermineBorders(day_data.events_bool,day_data.conflicts_bool)" id="card_number_{{day_num}}" class="card card_style {{class_holder}} {{border}}">
-              <p class="date_number">{{day_data.num}}</p>
-              <p class="day">{{day_data.letter}}<span class="day_abrev">{{day_data.abrv}}</span></p>
-              <p ng-show="day_data.conflicts_bool" class="notice red">!</p>
-              <p ng-show="day_data.events_bool && !day_data.conflicts_bool" class="notice green icon-ok"></p>
-              <p ng-show="day_data.events_bool" class="events">events<span class="events_number">{{day_data.events_info.events.length}}</span></p>
+            <div ng-click="ShowDayData(day_data_array[day_number].events_info)" ng-hide="mobile && !day_data_array[day_number].events_bool" ng-repeat="x in NumberRepeater|limitTo:7 track by $index" ng-init="day_number = AddDay()" id="card_number_{{day_number}}" class="card card_style" ng-class="{'card_overflow_month' : day_data_array[day_number].overflow, 'Conflict' : day_data_array[day_number].conflicts_bool, 'NoConflict' : (!day_data_array[day_number].conflicts_bool && day_data_array[day_number].events_bool)}" >
+              <p class="date_number">{{day_data_array[day_number].num}}</p>
+              <p class="day">{{day_data_array[day_number].letter}}<span class="day_abrev">{{day_data_array[day_number].abrv}}</span></p>
+              <p ng-show="day_data_array[day_number].conflicts_bool" class="notice red">!</p>
+              <p ng-show="day_data_array[day_number].events_bool && !day_data_array[day_number].conflicts_bool" class="notice green icon-ok"></p>
+              <p ng-show="day_data_array[day_number].events_bool" class="events">events<span class="events_number">{{day_data_array[day_number].events_info.events.length}}</span></p>
             </div>
           </div>
         </div>

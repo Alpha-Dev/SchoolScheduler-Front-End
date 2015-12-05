@@ -71,7 +71,7 @@ a{
   flex-direction: column;
   opacity: 1;
   cursor:pointer;
-  border-width:2px;
+  border-width:3px;
 }
 .card:hover{
   border-color:black;

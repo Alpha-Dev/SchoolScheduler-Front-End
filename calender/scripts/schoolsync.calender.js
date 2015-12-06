@@ -111,6 +111,7 @@ angular.module('myApp', []).controller('namesCtrl', function ($scope) {
     }
     for (var a = 2000; a < actual_data.length; a++) {
       if (actual_data[a] != undefined) {
+        if(a == $scope.year){
         for (var b = 0; b < actual_data[a].length; b++) {
           if ($scope.month_number == b) {
             if (actual_data[a][b] != undefined)
@@ -120,6 +121,7 @@ angular.module('myApp', []).controller('namesCtrl', function ($scope) {
                 }
               }
           }
+        }
         }
       }
     }

@@ -47,8 +47,11 @@
               <p ng-show="day_data_array[day_number].conflicts_bool" class="notice red">!</p>
               <p ng-show="day_data_array[day_number].events_bool && !day_data_array[day_number].conflicts_bool" class="notice green icon-ok"></p>
               <p ng-show="day_data_array[day_number].events_bool" class="events">events<span class="events_number">{{day_data_array[day_number].events_info.events.length}}</span></p>
+              <div class="triangle" style="border-top: {{card_height}}px solid transparent;border-right:{{card_width}}px solid black;">
+              </div>
             </div>
           </div>
+
         </div>
     </div>
 

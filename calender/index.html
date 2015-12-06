@@ -31,11 +31,18 @@
     </div>
 
     <div id="main_page" >
+<<<<<<< HEAD
         <div id="cards_holder"ng-init="" class="panel panel-default">
           <div id="month_container" class="panel-heading">
             <p id="month_container_text">{{month_text}} {{date.getFullYear()}}</p>
             <button type="button" ng-click="NewCalendar(date,0)" class="btn btn-default btn-lg month_navi"><i class="icon-left-open left-direction calendar_nav" ></i></button>
             <button type="button" ng-click="NewCalendar(date,1)" class="btn btn-default btn-lg month_navi"><i class="icon-right-open calendar_nav" ></i></button>
+=======
+        <div id="cards_holder"ng-init="">
+          <div id="month_container">
+            <p id="month_container_text">{{month_text}} {{date.getFullYear()}}</p>
+            <div><i class="icon-left-open left-direction calendar_nav" ng-click="NewCalendar(date,0)"></i><i class="icon-right-open calendar_nav" ng-click="NewCalendar(date,1)"></i></div>
+>>>>>>> origin/master
           </div>
           <div ng-show="NoEvents && mobile" id="NoCards">
             <p >No Events</p>

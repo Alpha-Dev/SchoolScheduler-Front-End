@@ -41,14 +41,13 @@
             <p >No Events</p>
           </div>
           <div ng-hide="NoEvents && mobile" ng-repeat="x in NumberRepeater|limitTo:6 track by $index" class="calender_row" >
-            <div ng-click="ShowDayData(day_data_array[day_number].events_info)" ng-hide="mobile && !day_data_array[day_number].events_bool" ng-repeat="x in NumberRepeater|limitTo:7 track by $index" ng-init="day_number = AddDay()" id="card_number_{{day_number}}" class="card card_style" ng-class="{'card_overflow_month' : day_data_array[day_number].overflow, 'Conflict' : day_data_array[day_number].conflicts_bool, 'NoConflict' : (!day_data_array[day_number].conflicts_bool && day_data_array[day_number].events_bool)}" >
+            <div ng-click="ShowDayData(day_data_array[day_number].events_info)" ng-hide="mobile && !day_data_array[day_number].events_bool" ng-repeat="x in NumberRepeater|limitTo:7 track by $index" ng-init="day_number = AddDay()" id="card_number_{{day_number}}" class="card card_style" ng-class="{'EventsHere' : (day_data_array[day_number].events_bool),'card_overflow_month' : day_data_array[day_number].overflow, 'Conflict' : day_data_array[day_number].conflicts_bool, 'NoConflict' : (!day_data_array[day_number].conflicts_bool && day_data_array[day_number].events_bool)}" >
               <p class="date_number">{{day_data_array[day_number].num}}</p>
               <p class="day">{{day_data_array[day_number].letter}}<span class="day_abrev">{{day_data_array[day_number].abrv}}</span></p>
               <p ng-show="day_data_array[day_number].conflicts_bool" class="notice red">!</p>
               <p ng-show="day_data_array[day_number].events_bool && !day_data_array[day_number].conflicts_bool" class="notice green icon-ok"></p>
               <p ng-show="day_data_array[day_number].events_bool" class="events">events<span class="events_number">{{day_data_array[day_number].events_info.events.length}}</span></p>
-              <div class="triangle" style="border-top: {{card_height}}px solid transparent;border-right:{{card_width}}px solid black;">
-              </div>
+
             </div>
           </div>
 

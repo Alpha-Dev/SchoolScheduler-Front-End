@@ -315,8 +315,6 @@ angular.module('myApp', []).controller('namesCtrl', function ($scope) {
   ResizeCards = function () {
     var d = $("html").width() / 8
     var c = $("html").height() / 8;
-    $scope.card_height = c;
-    $scope.card_width = d;
     $("#card_style").empty();
     if ($('html').width() > 724) {
       $scope.mobile = false;

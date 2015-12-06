@@ -6,11 +6,29 @@ html{
 
 
 /*DATE CARD */
-
+/*
+.card_style{
+  height:64;
+  width:81.625;
+  font-size:0.70978em;
+}
+*/
 /*MAIN PAGE*/
+#month_container_text{
+  position:relative;
+}
+.calendar_nav{
+  opacity: 0.7;
+  transition:all 0.25s;
+}
+.calendar_nav:hover{
+  opacity: 1;
+}
+.calendar_nav:active{
+  color:white
+}
 #main_page{
   height:95%;
-  width:100%;
   display:flex;
   align-items: center;
   justify-content: flex-start;
@@ -20,21 +38,48 @@ html{
   display:flex;
   flex-direction: column;
   justify-content: center;
-  width:100%;
+  align-items:center;
+  padding-bottom: 1%
 }
 #Nav_Bar{
   position:inherit;
+}
+#NoCards{
+  text-align: center;
+  font-size:2em;
+  height:60%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
 .calender_row{
   display:flex;
   justify-content: center ;
   align-items: center;
-  width:100%;
+  width:95%;
 }
 #month_container{
-  width:100%;
   font-size:3em;
   text-align: center;
+  width:100%;
+  margin-bottom: 1%
+}
+.month_navi{
+  font-size:1em;
+}
+
+/*ROUNDING*/
+#card_number_1{
+  border-top-left-radius: 6px;
+}
+#card_number_7{
+  border-top-right-radius: 6px
+}
+#card_number_36{
+  border-bottom-left-radius: 6px;
+}
+#card_number_42{
+  border-bottom-right-radius: 6px;
 }
 @media screen and (max-width: 1065px) {
   .date_number,.events_number{
@@ -56,8 +101,9 @@ html{
     width:100%;
   }
 
+
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 724px) {
   .calender_row{
     flex-direction: column;
   }
@@ -71,7 +117,21 @@ html{
     font-size:2em;
 
   }
+  #cards_holder{
+    width:95%;
+  }
   .day_abrev{
     display:inline;
+  }
+}
+@media screen and (max-height:570px){
+  .day{
+    font-size:1.5em;
+  }
+  .date_number{
+    font-size:2em;
+  }
+  .events_number{
+    font-size:2em;
   }
 }

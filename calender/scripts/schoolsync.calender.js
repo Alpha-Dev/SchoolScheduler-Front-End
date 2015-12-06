@@ -67,10 +67,6 @@ angular.module('myApp', []).controller('namesCtrl', function ($scope) {
         }
       }
     }
-<<<<<<< HEAD
-=======
-    console.log("rofofl")
->>>>>>> origin/master
   }
   LoadWorkingData = function (month) {
     var actual_data = [];
@@ -130,7 +126,6 @@ angular.module('myApp', []).controller('namesCtrl', function ($scope) {
     //Handle if there are no events
 
     IdentifyConflicts(working_data);
-<<<<<<< HEAD
     console.log(working_data)
     if (working_data.length == 0) {
       $scope.NoEvents = true;
@@ -138,11 +133,6 @@ angular.module('myApp', []).controller('namesCtrl', function ($scope) {
     else{
       $scope.NoEvents = false;
     }
-=======
-    if (working_data.length == 0) {
-      $scope.NoEvents = true;
-    }
->>>>>>> origin/master
   }
   var card_tracker;
   $scope.FindStartingDay = function (date) {
@@ -200,7 +190,6 @@ angular.module('myApp', []).controller('namesCtrl', function ($scope) {
       }
     }
     //Determines the date of the length of this month and last month
-<<<<<<< HEAD
 
     $scope.calendar_start_date = previous_month;
     $scope.month_length = ender;
@@ -208,15 +197,6 @@ angular.module('myApp', []).controller('namesCtrl', function ($scope) {
     DetermineMonth($scope.month_number);
   }
 
-=======
-
-    $scope.calendar_start_date = previous_month;
-    $scope.month_length = ender;
-    $scope.day_tracker = $scope.calendar_start_date - $scope.day_number;
-    DetermineMonth($scope.month_number);
-  }
-
->>>>>>> origin/master
   var previous_month_finished = false;
   var calendar_month_finished = false;
   var day_of_the_week_tracker = -1;
@@ -243,10 +223,6 @@ angular.module('myApp', []).controller('namesCtrl', function ($scope) {
     //If the day overflows, reset
     //Obtain events info for that day.
     current_day_data = working_data[$scope.day_tracker];
-<<<<<<< HEAD
-=======
-    console.log(working_data)
->>>>>>> origin/master
     if (current_day_data != undefined) {
       event_info = current_day_data
       if (current_day_data.conflicts > 0) {
@@ -338,11 +314,7 @@ angular.module('myApp', []).controller('namesCtrl', function ($scope) {
     var d = $("html").width() / 8
     var c = $("html").height() / 8;
     $("#card_style").empty();
-<<<<<<< HEAD
     if ($('html').width() > 724) {
-=======
-    if ($('html').width() > 600) {
->>>>>>> origin/master
       $scope.mobile = false;
       $("#card_style").append(".card_style{height:" + c + ";width:" + d + ";font-size:" + d / 115 + "em}")
     } else {

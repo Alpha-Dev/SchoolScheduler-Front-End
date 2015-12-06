@@ -67,6 +67,15 @@ html{
 .month_navi{
   font-size:1em;
 }
+.triangle{
+  	width: 0;
+  	height: 0;
+
+    opacity:0.07;
+    position:absolute;
+    top:0;
+    left:0;
+}
 
 /*ROUNDING*/
 #card_number_1{

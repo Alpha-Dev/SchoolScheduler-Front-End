@@ -67,7 +67,6 @@ angular.module('myApp', []).controller('namesCtrl', function ($scope) {
         }
       }
     }
-    console.log("rofofl")
   }
   LoadWorkingData = function (month) {
     var actual_data = [];
@@ -127,8 +126,12 @@ angular.module('myApp', []).controller('namesCtrl', function ($scope) {
     //Handle if there are no events
 
     IdentifyConflicts(working_data);
+    console.log(working_data)
     if (working_data.length == 0) {
       $scope.NoEvents = true;
+    }
+    else{
+      $scope.NoEvents = false;
     }
   }
   var card_tracker;
@@ -220,7 +223,6 @@ angular.module('myApp', []).controller('namesCtrl', function ($scope) {
     //If the day overflows, reset
     //Obtain events info for that day.
     current_day_data = working_data[$scope.day_tracker];
-    console.log(working_data)
     if (current_day_data != undefined) {
       event_info = current_day_data
       if (current_day_data.conflicts > 0) {
@@ -312,7 +314,7 @@ angular.module('myApp', []).controller('namesCtrl', function ($scope) {
     var d = $("html").width() / 8
     var c = $("html").height() / 8;
     $("#card_style").empty();
-    if ($('html').width() > 600) {
+    if ($('html').width() > 724) {
       $scope.mobile = false;
       $("#card_style").append(".card_style{height:" + c + ";width:" + d + ";font-size:" + d / 115 + "em}")
     } else {

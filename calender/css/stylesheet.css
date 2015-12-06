@@ -29,7 +29,6 @@ html{
 }
 #main_page{
   height:95%;
-  width:100%;
   display:flex;
   align-items: center;
   justify-content: flex-start;
@@ -39,7 +38,8 @@ html{
   display:flex;
   flex-direction: column;
   justify-content: center;
-  width:100%;
+  align-items:center;
+  padding-bottom: 1%
 }
 #Nav_Bar{
   position:inherit;
@@ -56,12 +56,30 @@ html{
   display:flex;
   justify-content: center ;
   align-items: center;
-  width:100%;
+  width:95%;
 }
 #month_container{
-  width:100%;
   font-size:3em;
   text-align: center;
+  width:100%;
+  margin-bottom: 1%
+}
+.month_navi{
+  font-size:1em;
+}
+
+/*ROUNDING*/
+#card_number_1{
+  border-top-left-radius: 6px;
+}
+#card_number_7{
+  border-top-right-radius: 6px
+}
+#card_number_36{
+  border-bottom-left-radius: 6px;
+}
+#card_number_42{
+  border-bottom-right-radius: 6px;
 }
 @media screen and (max-width: 1065px) {
   .date_number,.events_number{
@@ -83,8 +101,9 @@ html{
     width:100%;
   }
 
+
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 724px) {
   .calender_row{
     flex-direction: column;
   }
@@ -97,6 +116,9 @@ html{
     margin-bottom:10px;
     font-size:2em;
 
+  }
+  #cards_holder{
+    width:95%;
   }
   .day_abrev{
     display:inline;

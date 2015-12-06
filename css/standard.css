@@ -10,10 +10,9 @@
 
 
 html{
-  background-color:#99ccff;
+  /* background-color:#99ccff; */
   height:100%;
   width:100%;
-  font-family:mainfont;
   color:black;
 }
 p{
@@ -35,18 +34,19 @@ a{
   margin-top: 1%;
   width:100%;
   font-size:2em;
-  font-family:WalkwayBlack;
   position:fixed;
   z-index: 5;
-
+  display:flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 #Nav_bar_left{
   padding-left:1%;
 }
 #Nav_bar_right{
-  position:absolute;
-  right:1%;
-  top:1%;
+  margin-left: auto;
+  padding-right:1%;
+  
 }
 .Nav_Bar_Link{
   display:inline-block;

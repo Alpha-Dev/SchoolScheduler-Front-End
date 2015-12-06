@@ -1,11 +1,14 @@
 <html ng-app="myApp" ng-controller="namesCtrl">
   <head>
     <title>Linkus</title>
+    <script src="../scripts/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/standard.css"/>
     <link rel="stylesheet" type="text/css" href="../css/fontello.css"/>
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css"/>
     <meta name=viewport content="width=device-width, initial-scale=1">
-    <script src="../scripts/jquery.js"></script>
+
     <script src="../scripts/angular.min.js"></script>
     <script src="scripts/schoolsync.calender.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,24 +19,23 @@
     </style>
   </head>
   <body>
-    <div id="Nav_Bar">
+    <div id="Nav_Bar" class="navbar navbar-default navbar-static-top">
       <div id="Nav_bar_left">
-        <a href="/" class="Nav_Bar_Link">
+        <a href="/" class="navbar-brand" style="font-size:1.3em;">
           <p>Linkus</p>
         </a>
       </div>
       <div id="Nav_bar_right" >
-        <div href="/login"class="Nav_Bar_Link">
-          <p>Login</p>
-        </div>
+        <button type="button" class="btn btn-default btn-lg">Login</button>
       </div>
     </div>
 
     <div id="main_page" >
-        <div id="cards_holder"ng-init="">
-          <div id="month_container">
+        <div id="cards_holder"ng-init="" class="panel panel-default">
+          <div id="month_container" class="panel-heading">
             <p id="month_container_text">{{month_text}} {{date.getFullYear()}}</p>
-            <div><i class="icon-left-open left-direction calendar_nav" ng-click="NewCalendar(date,0)"></i><i class="icon-right-open calendar_nav" ng-click="NewCalendar(date,1)"></i></div>
+            <button type="button" ng-click="NewCalendar(date,0)" class="btn btn-default btn-lg month_navi"><i class="icon-left-open left-direction calendar_nav" ></i></button>
+            <button type="button" ng-click="NewCalendar(date,1)" class="btn btn-default btn-lg month_navi"><i class="icon-right-open calendar_nav" ></i></button>
           </div>
           <div ng-show="NoEvents && mobile" id="NoCards">
             <p >No Events</p>

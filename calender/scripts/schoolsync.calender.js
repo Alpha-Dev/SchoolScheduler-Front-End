@@ -311,19 +311,24 @@ angular.module('myApp', []).controller('namesCtrl', function ($scope) {
   $scope.ShowDayData = function (event_info) {
     console.log(event_info)
   }
-
+var oldhtmlwidth = 0
+var newhtmlwidth = 0;
+console.log(newhtmlwidth)
   ResizeCards = function () {
-    var d = $("html").width() / 8
-    var c = $("html").height() / 8;
-    $("#card_style").empty();
-    if ($('html').width() > 724) {
-      $scope.mobile = false;
-      $("#card_style").append(".card_style{height:" + c + ";width:" + d + ";font-size:" + d / 115 + "em}")
-    } else {
-      $scope.mobile = true;
+    oldhtmlwidth = newhtmlwidth;
+    newhtmlwidth = $("html").width();
+    if(newhtmlwidth - oldhtmlwidth > 100){
+      var d = $("html").width() / 8
+      var c = $("html").height() / 8;
+      $("#card_style").empty();
+      if ($('html').width() > 724) {
+        $scope.mobile = false;
+        $("#card_style").append(".card_style{height:" + c + ";width:" + d + ";font-size:" + d / 115 + "em}")
+      } else {
+        $scope.mobile = true;
+      }
+      $scope.$evalAsync();
     }
-    $scope.$evalAsync();
-
   }
 
 

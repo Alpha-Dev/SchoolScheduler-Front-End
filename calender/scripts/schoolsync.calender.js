@@ -313,8 +313,9 @@ angular.module('myApp', []).controller('namesCtrl', function ($scope) {
   }
 var oldhtmlwidth = 0
 var newhtmlwidth = 0;
-console.log(newhtmlwidth)
+
   ResizeCards = function () {
+    console.log(newhtmlwidth)
     oldhtmlwidth = newhtmlwidth;
     newhtmlwidth = $("html").width();
     if(newhtmlwidth - oldhtmlwidth > 100){

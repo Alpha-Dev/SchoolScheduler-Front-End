@@ -133,6 +133,7 @@ html{
     display:inline;
   }
 }
+/*
 @media screen and (max-height:570px) and (min-width: 724px){
   .day{
     font-size:1.5em;
@@ -144,3 +145,4 @@ html{
     font-size:2em;
   }
 }
+*/

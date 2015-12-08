@@ -11,7 +11,7 @@
 
 html{
   /* background-color:#99ccff; */
-  height:100%;
+
   width:100%;
   color:black;
 }
@@ -46,7 +46,7 @@ a{
 #Nav_bar_right{
   margin-left: auto;
   padding-right:1%;
-  
+
 }
 .Nav_Bar_Link{
   display:inline-block;

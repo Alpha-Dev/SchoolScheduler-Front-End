@@ -100,13 +100,8 @@ angular.module('myApp', []).controller('namesCtrl', function ($scope) {
       }, {
         name: "School Thing 2",
         desc: "Eat the ooo33o",
-        time_start: 1435,
+        time_start: 1430,
         time_end: 1545
-      }, {
-        name: "School Thing 3",
-        desc: "Eat the ooo33o",
-        time_start: 1515,
-        time_end: 1652
       }]
     }
     for (var a = 2000; a < actual_data.length; a++) {
@@ -308,8 +303,13 @@ angular.module('myApp', []).controller('namesCtrl', function ($scope) {
   }
 
 
-  $scope.ShowDayData = function (event_info) {
-    console.log(event_info)
+  $scope.ShowDayData = function (day_num) {
+    if($scope.day_data_array[day_num].events_bool == true){
+      var day_data = $scope.day_data_array[day_num].events_info.events;
+      console.log(day_data)
+      $scope.day_data = day_data;
+      $scope.event_view = true;
+    }
   }
 var oldhtmlwidth = 0
 var newhtmlwidth = 0;
@@ -318,7 +318,6 @@ var newhtmlwidth = 0;
     console.log(newhtmlwidth)
     oldhtmlwidth = newhtmlwidth;
     newhtmlwidth = $("html").width();
-    if(newhtmlwidth - oldhtmlwidth > 100){
       var d = $("html").width() / 8
       var c = $("html").height() / 8;
       $("#card_style").empty();
@@ -329,7 +328,6 @@ var newhtmlwidth = 0;
         $scope.mobile = true;
       }
       $scope.$evalAsync();
-    }
   }
 
 

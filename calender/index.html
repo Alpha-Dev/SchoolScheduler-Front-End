@@ -1,4 +1,4 @@
-<html ng-app="myApp" ng-controller="namesCtrl">
+<html>
   <head>
     <title>Linkus</title>
     <script src="../scripts/jquery.js"></script>
@@ -18,7 +18,8 @@
       }
     </style>
   </head>
-  <body>
+  <body ng-app="myApp" ng-controller="namesCtrl">
+
     <div id="Nav_Bar" class="navbar navbar-default navbar-static-top">
       <div id="Nav_bar_left">
         <a href="/" class="navbar-brand" style="font-size:1.3em;">
@@ -30,18 +31,39 @@
       </div>
     </div>
 
-    <div id="main_page" >
+    <div id="main_page">
+
         <div id="cards_holder"ng-init="" class="panel panel-default">
+          <div id="event_cover" ng-show="event_view">
+            <div id="event_box">
+              <!--
+              <div >
+                <p>Hello {{$index}} {{x}}</p>
+              </div>
+            -->
+              <div class="event_container" ng-repeat="x in day_data">
+                <div class="event_words_box_container">
+                  <p class="event_name_box">{{x.name}}</p>
+                  <p class="event_desc_box">{{x.desc}}</p>
+                </div>
+                <div class="event_time_box">
+                  <p class="event_time"><span>{{x.time_start}}</span>-<span>{{x.time_end}}</span></p>
+                </div>
+              </div>
+            </div>
+            <div id="black_cover" ng-click="event_view = false">
+            </div>
+          </div>
           <div id="month_container" class="panel-heading">
             <p id="month_container_text">{{month_text}} {{date.getFullYear()}}</p>
             <button type="button" ng-click="NewCalendar(date,0)" class="btn btn-default btn-lg month_navi"><i class="icon-left-open left-direction calendar_nav" ></i></button>
             <button type="button" ng-click="NewCalendar(date,1)" class="btn btn-default btn-lg month_navi"><i class="icon-right-open calendar_nav" ></i></button>
           </div>
           <div ng-show="NoEvents && mobile" id="NoCards">
-            <p >No Events</p>
+            <p>No Events</p>
           </div>
           <div ng-hide="NoEvents && mobile" ng-repeat="x in NumberRepeater|limitTo:6 track by $index" class="calender_row" >
-            <div ng-click="ShowDayData(day_data_array[day_number].events_info)" ng-hide="mobile && !day_data_array[day_number].events_bool" ng-repeat="x in NumberRepeater|limitTo:7 track by $index" ng-init="day_number = AddDay()" id="card_number_{{day_number}}" class="card card_style" ng-class="{'EventsHere' : (day_data_array[day_number].events_bool),'card_overflow_month' : day_data_array[day_number].overflow, 'Conflict' : day_data_array[day_number].conflicts_bool, 'NoConflict' : (!day_data_array[day_number].conflicts_bool && day_data_array[day_number].events_bool)}" >
+            <div ng-click="ShowDayData(day_number)" ng-hide="mobile && !day_data_array[day_number].events_bool" ng-repeat="x in NumberRepeater|limitTo:7 track by $index" ng-init="day_number = AddDay()" id="card_number_{{day_number}}" class="card card_style" ng-class="{'EventsHere' : (day_data_array[day_number].events_bool),'card_overflow_month' : day_data_array[day_number].overflow, 'Conflict' : day_data_array[day_number].conflicts_bool, 'NoConflict' : (!day_data_array[day_number].conflicts_bool && day_data_array[day_number].events_bool)}" >
               <p class="date_number">{{day_data_array[day_number].num}}</p>
               <p class="day">{{day_data_array[day_number].letter}}<span class="day_abrev">{{day_data_array[day_number].abrv}}</span></p>
               <p ng-show="day_data_array[day_number].conflicts_bool" class="notice red">!</p>

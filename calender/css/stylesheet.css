@@ -1,5 +1,5 @@
 html{
-  overflow: hidden;
+
 }
 /*GLOBAL CLASSES*/
 
@@ -8,12 +8,65 @@ html{
 /*DATE CARD */
 /*
 .card_style{
-  height:64;
+  h
   width:81.625;
   font-size:0.70978em;
 }
 */
 /*MAIN PAGE*/
+.event_time_box{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.event_words_box_container{
+  display:flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.event_time{
+  font-size:2em;
+}
+.event_container{
+  display:flex;
+  justify-content: space-around;
+}
+.event_name_box{
+  font-size:3em;
+}
+.event_desc_box{
+  font-size:1.5em;
+}
+#event_cover{
+  height:100%;
+  width:100%;
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#black_cover{
+  position:absolute;
+  top:0;
+  left:0;
+  background-color: black;
+  opacity: 0.3;
+  border-radius: 0.5em;
+  height:100%;
+  width:100%;
+}
+#event_box{
+  height:90%;
+  width:90%;
+  background-color:white;
+  opacity: 1;
+  border-radius: 0.5em;
+  z-index: 10;
+}
 #month_container_text{
   position:relative;
 }
@@ -33,13 +86,16 @@ html{
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
+  z-index: -1;
 }
+
 #cards_holder{
   display:flex;
   flex-direction: column;
   justify-content: center;
   align-items:center;
-  padding-bottom: 1%
+  padding-bottom: 1%;
+  position:relative;
 }
 #Nav_Bar{
   position:inherit;
@@ -133,7 +189,7 @@ html{
     display:inline;
   }
 }
-/*
+
 @media screen and (max-height:570px) and (min-width: 724px){
   .day{
     font-size:1.5em;
@@ -145,4 +201,3 @@ html{
     font-size:2em;
   }
 }
-*/

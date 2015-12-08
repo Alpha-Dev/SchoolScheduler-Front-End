@@ -76,12 +76,12 @@ angular.module('myApp', []).controller('namesCtrl', function ($scope) {
     actual_data[2015][11][15] = {
       events: [{
         name: "School Thing 1",
-        desc: "Eat the oooo",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu lorem tortor. Vestibulum ac nisl nisi. Aenean dignissim sit amet nunc eget congue. Aliquam ac neque ornare, aliquam enim nec, hendrerit tortor. Suspendisse ex dui, dapibus a orci sit amet, ultricies ultrices ex. In ultricies est quis dui consequat, a eleifend ex faucibus. Fusce eget ipsum non leo interdum sagittis et vel urna. Suspendisse viverra sapien vitae porttitor euismod. Nullam a enim elit. Proin maximus posuere maximus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam sit amet elit mi. Suspendisse potenti. Curabitur nec lacus sem.",
         time_start: 1412,
         time_end: 1432
       }, {
         name: "School Thing 2",
-        desc: "Eat the ooo33o",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu lorem tortor. Vestibulum ac nisl nisi. Aenean dignissim sit amet nunc eget congue. Aliquam ac neque ornare, aliquam enim nec, hendrerit tortor. Suspendisse ex dui, dapibus a orci sit amet, ultricies ultrices ex. In ultricies est quis dui consequat, a eleifend ex faucibus. Fusce eget ipsum non leo interdum sagittis et vel urna. Suspendisse viverra sapien vitae porttitor euismod. Nullam a enim elit. Proin maximus posuere maximus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam sit amet elit mi. Suspendisse potenti. Curabitur nec lacus sem.",
         time_start: 1435,
         time_end: 1455
       }, {
@@ -94,7 +94,7 @@ angular.module('myApp', []).controller('namesCtrl', function ($scope) {
     actual_data[2015][11][23] = {
       events: [{
         name: "School Thing 1",
-        desc: "Eat the oooo",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu lorem tortor. Vestibulum ac nisl nisi. Aenean dignissim sit amet nunc eget congue. Aliquam ac neque ornare, aliquam enim nec, hendrerit tortor. Suspendisse ex dui, dapibus a orci sit amet, ultricies ultrices ex. In ultricies est quis dui consequat, a eleifend ex faucibus. Fusce eget ipsum non leo interdum sagittis et vel urna. Suspendisse viverra sapien vitae porttitor euismod. Nullam a enim elit. Proin maximus posuere maximus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam sit amet elit mi. Suspendisse potenti. Curabitur nec lacus sem.",
         time_start: 1412,
         time_end: 1432
       }, {

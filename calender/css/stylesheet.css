@@ -33,10 +33,29 @@ html{
   justify-content: space-around;
 }
 .event_name_box{
-  font-size:3em;
+  font-size:2em;
 }
 .event_desc_box{
   font-size:1.5em;
+}
+
+.row{
+    overflow: hidden;
+    border-top:solid #999900;
+    border-bottom: solid #999900;
+}
+
+[class*="col-"]{
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+    text-align: center;
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.event_row{
+  border-radius: 0.5em;
 }
 #event_cover{
   height:100%;
@@ -60,6 +79,7 @@ html{
   width:100%;
 }
 #event_box{
+  overflow: auto;
   height:90%;
   width:90%;
   background-color:white;

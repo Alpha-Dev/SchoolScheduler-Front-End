@@ -1,7 +1,7 @@
 <html>
   <head>
     <title>Linkus</title>
-    <script src="../scripts/jquery.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/standard.css"/>
@@ -41,7 +41,14 @@
                 <p>Hello {{$index}} {{x}}</p>
               </div>
             -->
-              <div class="event_container" ng-repeat="x in day_data">
+              <div  ng-repeat="x in day_data" class="container-fluid">
+                <div class="row">
+                  <div class="col-sm-3" style="background-color:#ffffe5"><p class="event_name_box">{{x.name}}</p></div>
+                  <div class="col-sm-4" style="background-color:#ffffcc"><p class="event_desc_box">{{x.desc}}</p></div>
+                  <div class="col-sm-3" style="background-color:#ffffe5"><p class="event_desc_box"><p class="event_time"><span>{{x.time_start}}</span>-<span>{{x.time_end}}</span></p></p></div>
+                  <div class="col-sm-2" style="background-color:#ffffcc">  <button type="button" class="btn btn-danger">Remove</button></div>
+                </div>
+                <!--
                 <div class="event_words_box_container">
                   <p class="event_name_box">{{x.name}}</p>
                   <p class="event_desc_box">{{x.desc}}</p>
@@ -49,6 +56,7 @@
                 <div class="event_time_box">
                   <p class="event_time"><span>{{x.time_start}}</span>-<span>{{x.time_end}}</span></p>
                 </div>
+              -->
               </div>
             </div>
             <div id="black_cover" ng-click="event_view = false">
